@@ -1,6 +1,5 @@
 import time
 from endstone.command import Command, CommandSender
-from endstone import Player
 from endstone.plugin import Plugin
 
 class BetterStop(Plugin):
@@ -9,7 +8,7 @@ class BetterStop(Plugin):
     commands = {
         "bs": {
             "description": "Better stop command",
-            "usages": ["/bs <number: int> [reason: message]"],
+            "usages": ["/bs <after_time: int> [reason: message]"],
             "permissions": ["better_stop.command.bs"],
         },
     }
@@ -26,7 +25,7 @@ class BetterStop(Plugin):
             if int(args[0]) <= 0:
                 sender.send_error_message("You should provide a number above 0!")
             else:
-                reason=args[1]
+                reason=str(args[1])
                 if len(reason) == 0:
                     self.server.broadcast_message(f"The operator §l§e{sender.name}§r will §l§4stop§r this server about §l§b{args[0]}§r seconds!")
                     self.logger.info(f"§e{sender.name}§r request to stop server with §ano reason§r at §b{time.asctime( time.localtime(time.time()) )}§r after §b{int(args[0])}s§r")
