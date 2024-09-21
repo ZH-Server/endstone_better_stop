@@ -8,7 +8,7 @@ Better stop server command
 
 ## Install
 
-- Download `.whl` file frome [release](Better stop server command ) or [action](https://github.com/ZH-Server/endstone_better_stop/actions/workflows/build.yml)
+- Download `.whl` file frome [release](https://github.com/ZH-Server/endstone_better_stop/releases) or [action](https://github.com/ZH-Server/endstone_better_stop/actions/workflows/build.yml)
 - Put it into `plugins` folder
 - Restart the server, enjoy!
 
