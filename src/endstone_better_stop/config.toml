@@ -1,0 +1,1 @@
+default_stop_msg = "The operator §l§e{op_name}§r will §l§4stop§r this server about §l§b{arg_second}§r seconds!"
